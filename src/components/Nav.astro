@@ -1,0 +1,29 @@
+---
+const navItems = [
+  { label: 'Work', href: '/#work' },
+  { label: 'About', href: '/#about' },
+  { label: 'Hire Me', href: '/#hire' },
+];
+---
+
+<nav class="w-full bg-white border-b border-gray-100">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <a href="/" class="text-xl font-semibold text-gray-900 hover:text-gray-700 transition-colors">
+        June Kato
+      </a>
+      <ul class="flex items-center space-x-8">
+        {navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</nav>
